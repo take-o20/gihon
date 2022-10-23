@@ -55,8 +55,8 @@ int DP[MAX_W + 1];
 void solve3() {
     for(int i = 0; i < n; i++) {
         for(int j = w[i]; j <= W; j++) {
-            dp[j] = max(dp[j], dp[j - w[i]] + v[i]);
+            DP[j] = max(DP[j], DP[j - w[i]] + v[i]);
         }
     }
-    cout << dp[W] << endl;
+    cout << DP[W] << endl;
 }
